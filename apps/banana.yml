@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root-app
+  name: my-app-1
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,6 +11,6 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: apps
-    repoURL: https://github.com/mskender/argocd-examples
+    path: apps/banana
+    repoURL: https://github.com/mskender/argocd-examples/
     targetRevision: HEAD
